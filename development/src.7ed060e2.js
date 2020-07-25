@@ -193,6 +193,16 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("./scss/main.scss");
+
+function calculate() {
+  fetch("https://v6.exchangerate-api.com/v6/4f5f732b607c1c21803eac93/latest/USD").then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    console.log(data);
+  });
+}
+
+calculate();
 },{"./scss/main.scss":"../src/scss/main.scss"}],"C:/Users/girwa/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
